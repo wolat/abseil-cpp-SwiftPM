@@ -11,10 +11,12 @@ jobs:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Set Xcode version
+      run: sudo xcode-select -s /Applications/Xcode_16.4.app
     - name: Initialize xcodebuild
       run: xcodebuild -list
     - name: iOS Simulator Build Tests
-      run: xcodebuild -scheme abseil build -sdk 'iphonesimulator' -destination 'platform=iOS Simulator,name=iPhone 11'
+      run: xcodebuild -scheme abseil build -sdk 'iphonesimulator' -destination 'platform=iOS Simulator,name=iPhone 16'
     - name: macos Build Tests
       run: xcodebuild -scheme abseil build -sdk 'macosx' -destination 'platform=OS X,arch=x86_64',
     - name: tvOS Build Tests
