@@ -66,7 +66,7 @@ let package = Package(
     .testTarget(
       name: "build-test",
       dependencies: [
-        "abseil",
+        "abseil_nearby",
       ],
       path: "SwiftPMTests/build-test"
     ),
