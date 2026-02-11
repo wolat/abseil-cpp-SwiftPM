@@ -4,19 +4,19 @@
 import PackageDescription
 
 let package = Package(
-  name: "abseil",
+  name: "abseil_nearby",
   products: [
     .library(
-      name: "abseil",
+      name: "abseil_nearby",
       targets: [
-        "abseil",
+        "abseil_nearby",
       ]
     )
   ],
 
   targets: [
     .target(
-      name: "abseil",
+      name: "abseil_nearby",
       path: ".",
       exclude: [
         // main functions
